@@ -1,0 +1,37 @@
+<header>
+    <h1>My Cart</h1>
+</header>
+
+<div class="container">
+    <ng-container *ngIf="cartItems.length > 0; else noItems">
+        <div *ngFor="let item of cartItems" class="cart-item">
+            <img src={{item.image}} alt="Product Image">
+            <div class="cart-item-info">
+                <h4>item title:{{item.title}}</h4>
+                <p>Price: {{item.price}}</p>
+                <div class="quantity-controls">
+                    <button (click)="decreaseQuantity(item)" class="quantity-button minus-button">-</button>
+                     <b> Qty : {{item.quantity}}</b>
+                    <button (click)="increaseQuantity(item)" class="quantity-button plus-button">+</button>
+                </div>
+            </div>
+            <button (click)="removeItem1(item.productId)"class="remove-button">Remove</button>
+        </div>
+    </ng-container>
+    <ng-template #noItems>
+        <div class="empty-cart-message">
+            No products available in cart.
+        </div>
+    </ng-template>
+    <!-- Add more cart items here if needed -->
+
+    <div class="cart-total">
+        Total: $19.99 <!-- Replace this with the actual total price -->
+    </div>
+
+    <div class="cart-buttons">
+        <button class="cart-button" routerLink="/Home">Continue Shopping</button>
+        <button class="cart-button" routerLink="/Invoice">Checkout</button>
+        </div>
+   
+</div>

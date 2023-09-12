@@ -1,0 +1,40 @@
+<body>
+    <div class="main">
+        <input type="checkbox" id="chk" aria-hidden="true">
+
+        <div class="signup">
+            <form (ngSubmit)="onLogin()" #loginForm="ngForm" novalidate>
+              <label for="email" aria-hidden="true">Login</label>
+              <input type="email" name="email" id="email" placeholder="Email" [(ngModel)]="loginObj.emailId" required email>
+              <div *ngIf="loginForm.submitted && loginForm.controls['email'].errors?.['required']" class="error-message">
+                *Email is required.
+              </div>
+              <div *ngIf="loginForm.submitted && loginForm.controls['email'].errors?.['email']" class="error-message">
+                Invalid email format.
+              </div>
+              <input type="password" name="password" id="password" placeholder="Password" [(ngModel)]="loginObj.password" required>
+              <div *ngIf="loginForm.submitted && loginForm.controls['password'].errors?.['required']" class="error-message">
+                *Password is required.
+              </div>
+              
+          
+              <button type="submit">Login</button>
+            </form>
+          </div>
+          
+
+        <div class="login">
+            <form (ngSubmit)="onSignUp()" #signupForm="ngForm" novalidate>
+                <label for="chk" aria-hidden="true">Sign up</label>
+                <input type="text" name="txt" placeholder="User name" [(ngModel)]="signUpObj.name" required>
+                <input type="email" name="email" placeholder="Email" [(ngModel)]="signUpObj.emailId" required email>
+                  <select id="city" name="city" [(ngModel)]="selectedCity">
+                    <option *ngFor="let city of cities" [ngValue]="city.city">{{ city?.city }}</option>
+                  </select>
+                <input type="password" name="pswd" placeholder="Password" [(ngModel)]="signUpObj.password"
+                    required minlength="6">
+                <button type="submit" [disabled]="signupForm.invalid">Sign up</button>
+            </form>
+        </div>
+    </div>
+</body>

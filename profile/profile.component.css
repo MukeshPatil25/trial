@@ -1,0 +1,15 @@
+.profile-container {
+    max-width: 200px; /* Adjust this value to control the maximum width of the container */
+    margin: 0 auto; /* Centers the container horizontally */
+  }
+  
+  .profile-img {
+    width: 100%; /* This will make the image take up the full width of the container */
+    height: auto; /* The height will adjust automatically to maintain the image's aspect ratio */
+    border-radius: 50%; /* If your image is circular */
+  }
+  .img-fluid{
+    width: 50%;
+    height: 40%;
+    margin-left: 90px;
+  }

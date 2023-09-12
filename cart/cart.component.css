@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+.container {
+    padding: 20px;
+}
+.cart-item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+.cart-item img {
+    max-width: 100px;
+    margin-right: 10px;
+}
+.cart-item-info {
+    flex: 1;
+}
+.cart-item-info h4 {
+    margin: 0;
+}
+.cart-total {
+    text-align: right;
+    margin-top: 20px;
+    font-weight: bold;
+}
+.cart-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.cart-button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.cart-button:hover {
+    background-color: #555;
+}
+.remove-button {
+    background-color: #f44336;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.remove-button:hover {
+    background-color: #d32f2f;
+}
+.empty-cart-message {
+    font-size: 18px;
+    text-align: center;
+    padding: 20px;
+    color: red;
+    font-weight: bold; /* Make the text bold */
+    
+}
+.quantity-controls {
+    display: flex; /* Display the buttons horizontally */
+    align-items: center; /* Center the buttons vertically */
+  }
+  .quantity-button {
+    /* Add button styles common to both minus and plus buttons */
+    background-color: #f0f0f0;
+    border: none;
+    color: #333;
+    font-size: 1rem;
+    padding: 3px 8px; /* Reduce the padding to reduce button height */
+    cursor: pointer;
+  }
+  
+  .quantity-button:hover {
+    /* Add styles for button hover state */
+    background-color: #ddd;
+  }
+  
+  .quantity-button:active {
+    /* Add styles for button active/pressed state */
+    background-color: #bbb;
+  }
+  
+  .minus-button {
+    /* Add specific styles for the minus button */
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+  
+  .plus-button {
+    /* Add specific styles for the plus button */
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  
